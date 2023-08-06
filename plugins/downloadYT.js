@@ -55,7 +55,7 @@ AMDI({ cmd: ["song", "yta", "mp3"], desc: Lang.songDesc, example: Lang.songExa, 
         }
     } else if (execYT.isYT) {
         const title = ytVidList[0] ? ytVidList[0].title : ''
-        const ytDlTXT = `*🎶 Queen Amdi YT Downloader*\n\n📄 ${Lang.Title} ${title}`
+        const ytDlTXT = `*🎶 sid Amdi YT Downloader*\n\n📄 ${Lang.Title} ${title}`
         const buttons = [
             { type: "url", displayText: "Watch on YouTube", url: input },
             { type: "click", displayText: "🎶 Audio File", buttonCMD: `${prefix}ytdownload audio ${input}` },
@@ -102,7 +102,7 @@ AMDI({ cmd: ["video", "ytv", "mp4"], desc: Lang.videoDesc, example: Lang.videoEx
         }
     } else if (execYT.isYT) {
         const title = ytVidList[0] ? ytVidList[0].title : ''
-        const ytDlTXT = `*🎞️ Queen Amdi YT Downloader*\n\n📄 ${Lang.Title} ${title}`
+        const ytDlTXT = `*🎞️ sid Amdi YT Downloader*\n\n📄 ${Lang.Title} ${title}`
         const buttons = [
             { type: "url", displayText: "Watch on YouTube", url: input },
             { type: "click", displayText: "360p Quality", buttonCMD: `${prefix}ytdownload 360 ${input}` },
