@@ -15,7 +15,7 @@ const { axios } = Packages;
 const yts = require( 'yt-search' )
 const Lang = Language.getString('search');
 
-const searchTITLE = '🔎 *Queen Amdi Search Engine*'
+const searchTITLE = '🔎 *sid Amdi Search Engine*'
 
 AMDI({ cmd: ["yt", "yts", "ytsearch"], desc: Lang.YTSDESC, type: "primary", react: "🔎" }, (async (amdiWA) => {
     let { footerTXT, input, react, reply } = amdiWA.msgLayout;
