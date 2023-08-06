@@ -22,8 +22,8 @@ AMDI({ cmd: ["alive", "hi", "online"], desc: Lang.AliveDesc, type: "primary", re
     var ALIVE_MSG = await getSettings("ALIVE_MSG");
     if (ALIVE_MSG.input === 'default' || ALIVE_MSG.input == undefined) {
         const buttons = [
-            {type: "url", displayText: "💃🏻 Official Website", url: 'https://amdaniwasa.com/'},
-            {type: "url", displayText: "🎞️ AN Tech YouTube Channel", url: 'https://www.youtube.com/channel/UCZx8U1EU95-Wn9mH4dn15vQ'},
+            {type: "url", displayText: "💃🏻 Official Website", url: 'https://github.com/sid238/Sidamdi'},
+            {type: "url", displayText: "🎞️ singhaniya Tech YouTube Channel", url: 'https://www.youtube.com/channel/@singhaniyatech0744'},
             {type: "click", displayText: Lang.sysStats, buttonCMD: `${prefix}system`},
             {type: "click", displayText: Lang.vercheck, buttonCMD: `${prefix}qaversion`}
         ]
@@ -35,12 +35,12 @@ AMDI({ cmd: ["alive", "hi", "online"], desc: Lang.AliveDesc, type: "primary", re
 }));
 
 
-AMDI({ cmd: "ping", desc: Lang.PingDesc, type: "primary", react: "📍" }, (async (amdiWA) => {
+AMDI({ cmd: "ping", desc: Lang.PingDesc, type: "primary", react: "🅿️" }, (async (amdiWA) => {
     let { reply, sendText } = amdiWA.msgLayout
     var start = new Date()
     var checkSTS = await sendText('_Pinging to amdiModule_', {});
     var end = new Date()
-    await reply(`📍 *Ping: ` + (end - start) + 'ms*');
+    await reply(`🕔 *Ping: ` + (end - start) + 'ms*');
     return await amdiWA.web.sendMessage(amdiWA.clientJID, { delete: checkSTS.key })
 }));
 
@@ -48,12 +48,12 @@ AMDI({ cmd: "ping", desc: Lang.PingDesc, type: "primary", react: "📍" }, (asyn
 AMDI({ cmd: "system", desc: "Bot Status", cmdHideInMenu: true }, (async (amdiWA) => {
     let { reply } = amdiWA.msgLayout;
     
-    return await reply(system_stats(), "💻");
+    return await reply(system_stats(), "📱");
 }));
 
 
 AMDI({ cmd: ["qaversion", "version"], desc: "Version check", cmdHideInMenu: true }, (async (amdiWA) => {
     let { reply } = amdiWA.msgLayout;
     const version = Package.version
-    return await reply(`*🧬 Queen Amdi Version 🧬*\n\n` + '```Installed version``` : ' + version +'\n' + '\n```Check github``` : https://github.com/BlackAmda/QueenAmdi/');
+    return await reply(`*🧬 sid Amdi Version 🧬*\n\n` + '```Installed version``` : ' + version +'\n' + '\n```Check github``` : https://github.com/sid238/sidamdi/');
 }));
